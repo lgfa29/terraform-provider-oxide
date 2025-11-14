@@ -1,6 +1,6 @@
 FROM rust
 
-RUN /bin/bash -c 'git clone https://github.com/oxidecomputer/omicron.git --branch main --depth 1 && \
+RUN /bin/bash -c 'git clone https://github.com/oxidecomputer/omicron.git && \
   cd omicron && \
   source env.sh && \
   ./tools/install_builder_prerequisites.sh -y -s'
