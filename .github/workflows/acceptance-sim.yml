@@ -3,6 +3,9 @@ name: "simulator acceptance tests"
 on:
   workflow_call:
     inputs:
+      environment:
+        type: "string"
+        required: true
       target-branch:
         type: "string"
         default: ""
@@ -12,6 +15,7 @@ on:
 
 jobs:
   acceptance:
+    environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     steps:
       # Simulated omicron takes up a meaningful amount of disk space, and the

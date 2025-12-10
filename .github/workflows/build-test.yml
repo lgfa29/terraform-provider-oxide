@@ -27,8 +27,8 @@ jobs:
       - name: lint
         run: make lint
   acceptance:
-    environment: "main"
     uses: "./.github/workflows/acceptance-sim.yml"
     with:
+      environment: "main"
       target-branch: ${{ env.TARGET_BRANCH }}
       omicron-branch: ${{ env.OMICRON_BRANCH }}
