@@ -29,4 +29,4 @@ jobs:
   acceptance:
     uses: "./.github/workflows/acceptance-sim.yml"
     with:
-      environment: "rel/v0.17"
+      environment: "test-0"
