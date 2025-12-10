@@ -30,6 +30,7 @@ jobs:
       - uses: astral-sh/setup-uv@v7
       - name: install oxide cli
         run: |
+          exit 1
           mkdir -p bin
           wget https://github.com/oxidecomputer/oxide.rs/releases/download/v0.13.0+20250730.0.0/oxide-cli-x86_64-unknown-linux-gnu.tar.xz
           tar xvf oxide-cli-x86_64-unknown-linux-gnu.tar.xz
